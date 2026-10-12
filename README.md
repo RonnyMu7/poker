@@ -3,9 +3,10 @@
 Офлайн-прототип для учебного разбора раздач Texas Hold’em.
 
 ## Файлы
-- `index.html` — более поздняя версия раннего прототипа: ручной ввод карт, Monte Carlo equity, pot odds и упрощённый EV колла.
-- `archive/poker_lab_early.html` — предыдущая версия прототипа.
-- `preview/poker-lab-full.html` — расширенный preview: калькулятор эквити, Range Lab, предварительный просмотр hand history, профили соперников, журнал тренировки, 10-max стол и Telegram-демо.
+- `index.html` — основная расширенная версия: калькулятор equity/pot odds/EV, Range Lab, hand history preview, профили, журнал тренировки, 10-max стол и Telegram-демо.
+- `archive/poker_lab_prototype.html` — предыдущая версия корневого прототипа.
+- `archive/poker_lab_early.html` — самая ранняя версия прототипа.
+- `preview/poker-lab-full.html` — копия расширенной HTML-сборки для отдельного просмотра.
 
 ## Запуск
 Откройте `index.html` в современном браузере. Внешние библиотеки и сервер для базового запуска не требуются.
