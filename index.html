@@ -19,6 +19,26 @@
 <style>/* Add breathing room between the poker table and the seat-selection controls */
 .felt + .meta{margin-top:72px}
 </style>
+<style>
+/* Compact, separated seats for narrow Telegram mini-app screens */
+@media(max-width:600px){
+  .felt{height:440px;overflow:hidden}
+  .seat{width:clamp(66px,21vw,88px);padding:3px;border-radius:8px}
+  .seathead{display:flex;flex-direction:column;gap:3px}
+  .seathead input,.seat .stack{width:100%;min-width:0;font-size:9px;padding:4px 3px;min-height:25px}
+  .seat .cards{gap:2px;margin-top:3px}
+  .seat .cards select{width:50%;font-size:9px;padding:2px 0}
+  .seat .smallbtn{font-size:9px;padding:4px 1px;margin-top:3px}
+  .centerboard{width:clamp(125px,40vw,155px)}
+  .boardcards{gap:3px}
+  .boardcards .card{width:clamp(20px,6vw,26px);height:34px;font-size:10px}
+}
+/* Use an inset ring of positions on mobile to avoid cards crossing one another */
+@media(max-width:600px){
+  .seat{z-index:3}
+  .seat:nth-of-type(2){left:50%!important;top:10%!important}
+}
+</style>
 </head>
 <body><main class="app">
 <header class="top"><div class="brand"><div class="logo">♠</div><div><h1>PokerPro</h1><div class="sub">Стол · диапазоны · профили соперников</div></div></div><div class="topactions"><button id="export">Экспорт истории</button><button id="import">Импорт JSON</button><input id="file" type="file" accept=".json" hidden><button class="primary" id="newhand">＋ Новая раздача</button><button class="primary" id="openAccountBtn" type="button">Вход</button></div></header>
