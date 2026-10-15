@@ -45,7 +45,7 @@ function renderEquityMatrix(s,$,hero,board,opponentCount){
    }return Math.round(share/trials*100);
  }
  grid.querySelectorAll('.handcell').forEach(cell=>{
-   const label=cell.textContent.trim().split(/\\s+/)[0],cs=combosFor(label),chosen=cs[0];
+   const label=cell.textContent.trim().split(/\s+/)[0],cs=combosFor(label),chosen=cs[0];
    if(!chosen){cell.innerHTML=label+'<small>—</small>';return}
    const pct=estimate(chosen,10);cell.innerHTML=label+'<small>'+(pct===null?'—':pct+'%')+'</small>';
    cell.title=label+' · примерное эквити на текущем борде против '+Math.max(1,opponentCount)+' случайных соперников';
