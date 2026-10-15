@@ -9,7 +9,14 @@
 @media(max-width:900px){.layout{grid-template-columns:1fr}.felt{height:420px}.seat{width:115px}}@media(max-width:600px){.app{padding:9px}.panel{padding:10px}.felt{height:430px;border-width:6px}.seat{width:91px;padding:4px}.seathead input{font-size:9px}.seathead .stack{width:52px}.card{width:21px;height:29px;font-size:10px}.centerboard{width:155px}.boardcards .card{width:26px;height:36px}.handcell{font-size:8px;padding:6px 0}.metric b{font-size:16px}}
 .account-modal-back{position:fixed;inset:0;z-index:1000;display:none;place-items:center;padding:18px;background:#000b}.account-modal-back.show{display:grid}.account-modal{width:min(100%,430px);background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px}.account-modal button{width:100%;margin-top:8px;padding:11px}.telegram-btn{background:#229ed9;border-color:#229ed9;color:white}.account-status{border-top:1px solid var(--border);padding-top:12px}
 
-</style></head>
+</style><style>
+/* Stack field below player name, with a larger touch target */
+.seathead{display:flex;flex-direction:column;align-items:stretch;gap:4px}
+.seat .name{width:100%;min-width:0}
+.seat .stack{width:100%;min-height:30px;font-size:12px;box-sizing:border-box}
+@media(max-width:620px){.seat .stack{width:100%;min-height:30px;font-size:12px}}
+</style>
+</head>
 <body><main class="app">
 <header class="top"><div class="brand"><div class="logo">♠</div><div><h1>PokerPro</h1><div class="sub">Стол · диапазоны · профили соперников</div></div></div><div class="topactions"><button id="export">Экспорт истории</button><button id="import">Импорт JSON</button><input id="file" type="file" accept=".json" hidden><button class="primary" id="newhand">＋ Новая раздача</button><button class="primary" id="openAccountBtn" type="button">Вход</button></div></header>
 <div class="layout"><section class="panel"><div class="panelhead"><h2>Покерный стол · 10 мест</h2><span class="pill" id="handnum">Раздача #1</span></div>
